@@ -1,0 +1,49 @@
+ * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Outer Circle */
+    #parent {
+      position: fixed;
+      height: 300px;
+      width: 300px;
+      background-color: #111;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      text-shadow: 0 0 8px #00ffcc;
+    }
+
+    /* Rotating Ring */
+    #box {
+      position: absolute;
+      height: 90%;
+      width: 90%;
+      border-top: 7px solid lime;
+      border-bottom: 7px solid blue;
+      border-radius: 50%;
+      animation: rotation 2s linear infinite;
+      box-shadow: 0 0 20px rgb(255, 38, 0), 0 0 40px rgb(195, 0, 255);
+    }
+
+    @keyframes rotation {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
